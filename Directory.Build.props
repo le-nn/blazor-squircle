@@ -18,7 +18,7 @@
         <PackageId>$(AssemblyName)</PackageId>
         <AssemblyName>$(AssemblyName)</AssemblyName>
 
-        <Description>Squircle corners blazor component like iOS border-radius</Description>
+        <Description>An amazing Figma squircle corner-smoothing for Blazor component like border radius in iOS</Description>
         <Authors>le-nn</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/le-nn/blazor-squircle</PackageProjectUrl>

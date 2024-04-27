@@ -1,11 +1,11 @@
 # Squircle Blazor Component
 
-Squircle corner-smoothing blazor component like iOS border-radius.
+An amazing Figma squircle corner-smoothing for Blazor component like border radius in iOS
 
-[![NuGet](https://img.shields.io/nuget/v/Squircle.Blazor.svg)](https://www.nuget.org/packages/Squircle.Blazor/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![NuGet](https://img.shields.io/nuget/v/Squircle.Blazor.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![overview](./overview.png)
+![overview](https://raw.githubusercontent.com/le-nn/blazor-squircle/main/overview.png)
 
 ## What's Squircle
 
@@ -22,9 +22,10 @@ Squircles have been applied in design and optics.
 
 [https://medium.com/minimal-notes/rounded-corners-in-the-apple-ecosystem-1b3f45e18fcc](https://medium.com/minimal-notes/rounded-corners-in-the-apple-ecosystem-1b3f45e18fcc)
 
-![overlay](./overlay.png)
+![overlay](https://raw.githubusercontent.com/le-nn/blazor-squircle/main/overlay.png)
 
 ## DEMO
+
 https://le-nn.github.io/blazor-squircle/
 
 
