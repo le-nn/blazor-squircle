@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34814.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_root", "_root", "{C4034B31-16F1-9644-053A-65FFABCF55C7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.github\workflows\build-and-deploy.yml = .github\workflows\build-and-deploy.yml
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0C88DD14-F956-CE84-757C-A364CCF449FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{A39C23D2-F2C0-258D-165A-CF1E7FEE6E7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Test", "test\Squircle.Test\Squircle.Test.csproj", "{B1A44E58-C037-F75A-722B-1EABAB1A11A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Blazor", "src\Squircle.Blazor\Squircle.Blazor.csproj", "{F233572C-7A15-C008-A551-0476D6A22B98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squircle.Blazor.Demo", "demo\Squircle.Blazor.Demo\Squircle.Blazor.Demo.csproj", "{C3DD7ED7-FB3D-AC8E-5E83-7AC6472DEB3A}"
+EndProject
+Global
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {701E5BB9-EAB6-4A2C-8FC3-40250DF904A4}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1A44E58-C037-F75A-722B-1EABAB1A11A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A44E58-C037-F75A-722B-1EABAB1A11A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A44E58-C037-F75A-722B-1EABAB1A11A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A44E58-C037-F75A-722B-1EABAB1A11A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F233572C-7A15-C008-A551-0476D6A22B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F233572C-7A15-C008-A551-0476D6A22B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F233572C-7A15-C008-A551-0476D6A22B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F233572C-7A15-C008-A551-0476D6A22B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DD7ED7-FB3D-AC8E-5E83-7AC6472DEB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DD7ED7-FB3D-AC8E-5E83-7AC6472DEB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DD7ED7-FB3D-AC8E-5E83-7AC6472DEB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DD7ED7-FB3D-AC8E-5E83-7AC6472DEB3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1A44E58-C037-F75A-722B-1EABAB1A11A3} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
+		{F233572C-7A15-C008-A551-0476D6A22B98} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{C3DD7ED7-FB3D-AC8E-5E83-7AC6472DEB3A} = {A39C23D2-F2C0-258D-165A-CF1E7FEE6E7B}
+	EndGlobalSection
+EndGlobal
