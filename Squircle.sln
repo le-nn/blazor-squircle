@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_root", "_root", "{C4034B31
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
 		LICENSE.txt = LICENSE.txt
+		overlay.png = overlay.png
+		overview.png = overview.png
 		README.md = README.md
 	EndProjectSection
 EndProject

@@ -1,9 +1,12 @@
 <Solution>
   <Folder Name="/_root/">
     <File Path=".editorconfig" />
+    <File Path=".github\workflows\build-and-deploy.yml" />
     <File Path=".gitignore" />
     <File Path="Directory.Build.props" />
     <File Path="LICENSE.txt" />
+    <File Path="overlay.png" />
+    <File Path="overview.png" />
     <File Path="README.md" />
   </Folder>
   <Folder Name="/test/">
@@ -15,8 +18,4 @@
   <Folder Name="/demo/">
     <Project Path="demo\Squircle.Blazor.Demo\Squircle.Blazor.Demo.csproj" />
   </Folder>
-  <Folder Name="/.github/workflows/">
-    <File Path="build-and-deploy.yml" />
-  </Folder>
-  <Folder Name="/.github/" />
 </Solution>
