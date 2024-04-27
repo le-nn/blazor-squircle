@@ -111,13 +111,9 @@ class ResizeObserver {
         }
     }
 
-    class ActionWrapper {
-        public Action<float, float> _action;
-
-        [DynamicDependency(nameof(Invoke))]
-        public ActionWrapper(Action<float, float> action) {
-            _action = action;
-        }
+    [method: DynamicDependency(nameof(Invoke))]
+    class ActionWrapper(Action<float, float> action) {
+        public Action<float, float> _action = action;
 
         [JSInvokable]
         public void Invoke(float width, float height) => _action.Invoke(width, height);
