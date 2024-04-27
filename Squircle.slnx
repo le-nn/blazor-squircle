@@ -3,9 +3,11 @@
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
     <File Path="Directory.Build.props" />
+    <File Path="LICENSE.txt" />
+    <File Path="README.md" />
   </Folder>
   <Folder Name="/test/">
-    <Project Path="test\Squircle.Test\Squircle.Test.csproj" Type="Classic C#" />
+    <Project Path="test\Squircle.Test\Squircle.Test.csproj" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src\Squircle.Blazor\Squircle.Blazor.csproj" />
