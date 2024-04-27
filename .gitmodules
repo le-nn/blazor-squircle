@@ -1,0 +1,3 @@
+[submodule "lib/yolu"]
+	path = lib/yolu
+	url = https://github.com/le-nn/yolu.git

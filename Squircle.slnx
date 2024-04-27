@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/_root/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test\Squircle.Test\Squircle.Test.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src\Squircle.Blazor\Squircle.Blazor.csproj" />
+  </Folder>
+  <Folder Name="/demo/">
+    <Project Path="demo\Squircle.Blazor.Demo\Squircle.Blazor.Demo.csproj" />
+  </Folder>
+  <Folder Name="/.github/workflows/">
+    <File Path="build-and-deploy.yml" />
+  </Folder>
+  <Folder Name="/.github/" />
+</Solution>
