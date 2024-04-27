@@ -52,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './samples/Squircle.Blazor.Demo/bin/Release/net8.0/publish/wwwroot'
+          path: './demo/Squircle.Blazor.Demo/bin/Release/net8.0/publish/wwwroot'
 
       # Deploy the site
       - name: Deploy to GitHub Pages
