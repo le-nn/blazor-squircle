@@ -46,10 +46,15 @@ jobs:
       - name: Publish Sample Page
         run: dotnet publish ./demo/Squircle.Blazor.Demo/Squircle.Blazor.Demo.csproj -c Release -p:GHPages=true
 
-      # Deploy the site
-      - name: Deploy Github Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./samples/Squircle.Blazor.Demo/bin/Release/net8.0/publish/wwwroot
-          force_orphan: true
+          path: './demo/Squircle.Blazor.Demo/Squircle.Blazor.Demo.csproj'
+
+      # Deploy the site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
