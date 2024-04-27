@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
+﻿using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Squircle.Blazor;
 
@@ -53,6 +47,6 @@ public static class SquirclePathGenerator {
         var data2 = Regex.Replace(data1, @"[\r\n%#()<>?[\\\]^\`{|}]", m => Uri.EscapeDataString(m.Value));
 
 
-        return $"data:image/svg+xml,{data2}"; 
+        return $"data:image/svg+xml,{data2}";
     }
 }

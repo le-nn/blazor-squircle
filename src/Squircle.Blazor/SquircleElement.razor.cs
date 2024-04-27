@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using Squircle.Blazor;
-using System;
 using System.Collections.Concurrent;
 
 namespace Squircle.Blazor;

@@ -1,7 +1,5 @@
-using Xunit;
 using Bunit;
 using Squircle.Blazor;
-using Microsoft.JSInterop;
 
 namespace Squircle.Test;
 
