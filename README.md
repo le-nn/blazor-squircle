@@ -3,6 +3,7 @@
 Squircle corner-smoothing blazor component like iOS border-radius.
 
 [![NuGet](https://img.shields.io/nuget/v/Squircle.Blazor.svg)](https://www.nuget.org/packages/Squircle.Blazor/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![overview](./overview.png)
 
