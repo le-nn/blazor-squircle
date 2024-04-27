@@ -49,17 +49,21 @@ jobs:
 
       # Generate the website
       - name: Publish Sample Page
+        if: (github.event_name == 'release')
         run: dotnet publish ./demo/Squircle.Blazor.Demo/Squircle.Blazor.Demo.csproj -c Release -p:GHPages=true
 
       - name: Setup Pages
+        if: (github.event_name == 'release')
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
+        if: (github.event_name == 'release')  
         uses: actions/upload-pages-artifact@v3
         with:
           path: './demo/Squircle.Blazor.Demo/bin/Release/net8.0/publish/wwwroot'
 
       # Deploy the site
       - name: Deploy to GitHub Pages
+        if: (github.event_name == 'release')
         id: deployment
         uses: actions/deploy-pages@v4
