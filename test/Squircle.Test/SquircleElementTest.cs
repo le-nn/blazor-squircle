@@ -17,7 +17,7 @@ public class SquircleElementTest : TestContext {
         Assert.Equal(1, component.Instance.CacheCount);
 
         component.SetParametersAndRender(c => {
-            c.Add(p => p.Roundness, 0.2f);
+            c.Add(p => p.Smoothness, 0.2f);
         });
 
         // Check if cache is increased

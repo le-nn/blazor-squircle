@@ -8,7 +8,7 @@ namespace Squircle.Blazor;
 /// Squircle shape component like iOS corner radius.
 /// </summary>
 public partial class SquircleElement : ComponentBase, IAsyncDisposable {
-    private const float _defaultRoundness = 0.0586f / 0.332f;
+    private const float _defaultSmoothness = 0.0586f / 0.332f;
     private ElementReference _divRef;
     private float _width = default;
     private float _height = default;
@@ -35,12 +35,12 @@ public partial class SquircleElement : ComponentBase, IAsyncDisposable {
     public float? Radius { get; set; }
 
     /// <summary>
-    /// Gets or sets the roundness of the SquircleElement.
+    /// Gets or sets the smoothness of the SquircleElement.
     /// Recommended to set range 0 - 0.4.
     /// The default value is the ratio of iOS default.
     /// </summary>
     [Parameter]
-    public float? Roundness { get; set; } = _defaultRoundness;
+    public float? Smoothness { get; set; } = _defaultSmoothness;
 
     /// <summary>
     /// Gets or sets the child content of the SquircleElement.
@@ -105,36 +105,36 @@ public partial class SquircleElement : ComponentBase, IAsyncDisposable {
     }
 
     /// <summary>
-    /// Gets the style string for the SquircleElement based on the current dimensions, radius, and roundness.
+    /// Gets the style string for the SquircleElement based on the current dimensions, radius, and smoothness.
     /// Caches the generated style to improve performance.
     /// </summary>
     string GetStyle() {
         var width = _width;
         var height = _height;
         var radius = Radius;
-        var roundness = Roundness ?? _defaultRoundness;
-        var key = $"{width}-{height}-{radius}-{roundness}";
+        var smoothness = Smoothness ?? _defaultSmoothness;
+        var key = $"{width}-{height}-{radius}-{smoothness}";
 
         if (_cache.ContainsKey(key)) {
             return Style + _cache[key];
         }
         else {
-            var mask = GetMaskStyle(width, height, radius, roundness);
+            var mask = GetMaskStyle(width, height, radius, smoothness);
             _cache[key] = mask;
             return Style + mask;
         }
     }
 
     /// <summary>
-    /// Generates the mask style string for the SquircleElement based on the provided dimensions, radius, and roundness.
+    /// Generates the mask style string for the SquircleElement based on the provided dimensions, radius, and smoothness.
     /// </summary>
-    static string GetMaskStyle(float width, float height, float? radius, float roundness) {
+    static string GetMaskStyle(float width, float height, float? radius, float smoothness) {
         var maxBorderRadius = Math.Min(width, height) / 2;
         var finalBorderRadius = Math.Min(radius ?? maxBorderRadius, maxBorderRadius);
         var dataUri = SquirclePathGenerator.GetSquirclePathAsDataUri(
             width,
             height,
-            finalBorderRadius * roundness,
+            finalBorderRadius * smoothness,
             finalBorderRadius
         );
 

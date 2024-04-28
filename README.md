@@ -43,7 +43,7 @@ dotnet add package Squircle.Blazor
 
 ```html
 
-<SquircleElement Radius="50" Roundness="0.2f" Style="width:200px;height:200px;background:red;">
+<SquircleElement Radius="50" Smoothness="0.2f" Style="width:200px;height:200px;background:red;">
     <div> Content </div>
 </SquircleElement>
 
@@ -71,12 +71,12 @@ public string? Style { get; set; }
 public float? Radius { get; set; }
 
 /// <summary>
-/// Gets or sets the roundness of the SquircleElement.
+/// Gets or sets the smoothness of the SquircleElement.
 /// Recommended to set range 0 - 0.4.
 /// The default value is the ratio of iOS default.
 /// </summary>
 [Parameter]
-public float? Roundness { get; set; } = _defaultRoundness;
+public float? Smoothness { get; set; }
 
 /// <summary>
 /// Gets or sets the child content of the SquircleElement.
@@ -91,7 +91,7 @@ Please consider using filter drop-shadow.
 ```html
 
 <div style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));">
-    <SquircleElement Radius="50" Roundness="0.2f" Style="width:200px;height:200px;background:red;">
+    <SquircleElement Radius="50" Smoothness="0.2f" Style="width:200px;height:200px;background:red;">
         <div> Content </div>
     </SquircleElement>
 </div>

@@ -5,7 +5,7 @@ namespace Squircle.Blazor;
 
 public static class SquirclePathGenerator {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static string GetSquirclePath(double w, double h, double r1, double r2) {
+    public static string GenerateSquirclePath(double w, double h, double r1, double r2) {
         r1 = Math.Min(r1, r2);
         var path = $"""
          M 0,{r2}
@@ -25,7 +25,7 @@ public static class SquirclePathGenerator {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string GetSquirclePathAsDataUri(double w, double h, double r1, double r2) {
         var id = $"squircle-{w}-{h}-{r1}-{r2}";
-        var path = GetSquirclePath(w, h, r1, r2);
+        var path = GenerateSquirclePath(w, h, r1, r2);
         var svg = $"""
             <svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">
                 <defs>

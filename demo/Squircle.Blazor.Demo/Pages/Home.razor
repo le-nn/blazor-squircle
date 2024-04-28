@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<PageTitle> Home</PageTitle>
+<PageTitle> Blazor Squircle DEMO </PageTitle>
 
 <div style="display:flex; gap: 20px;flex-direction:column;padding: 32px;">
     <div style="display:flex; gap: 20px;flex-direction:column;">
@@ -14,11 +14,11 @@
 
         <div style="display:flex;gap: 12px;align-items:end;">
             <div style="display:flex;flex-direction:column;">
-                <label for="roundness">Roundness</label>
-                <input type="range" id="roundness" @bind="_roundness" @bind:event="oninput" min="0" max="0.4" step="0.01" />
+                <label for="smoothness">Smoothness</label>
+                <input type="range" id="smoothness" @bind="_smoothness" @bind:event="oninput" min="0" max="0.4" step="0.01" />
             </div>
-            <button @onclick=@(_ => _roundness = null) disabled="@(_roundness is null)">Default</button>
-            <p style="margin: 0;">@(_roundness?.ToString() ?? "Default")</p>
+            <button @onclick=@(_ => _smoothness = null) disabled="@(_smoothness is null)">Default</button>
+            <p style="margin: 0;">@(_smoothness?.ToString() ?? "Default")</p>
         </div>
 
         <div style="display:flex;gap: 12px;align-items:end;">
@@ -33,8 +33,8 @@
 
     <div style="display:flex;border-spacing:20px;gap: 20px;margin-top:48px;">
         <div style="display:flex; gap: 20px;flex-direction:column;">
-            <SquircleElement Style="@HalfStyle" Radius="_radius" Roundness="_roundness">Squircle</SquircleElement>
-            <SquircleElement Style="@Style" Radius="_radius" Roundness="_roundness">Squircle</SquircleElement>
+            <SquircleElement Style="@HalfStyle" Radius="_radius" Smoothness="_smoothness">Squircle</SquircleElement>
+            <SquircleElement Style="@Style" Radius="_radius" Smoothness="_smoothness">Squircle</SquircleElement>
         </div>
 
         <div style="display:flex; gap: 20px;flex-direction:column;">
@@ -46,9 +46,9 @@
 
 @code {
     float _size = 100;
-    float? _roundness = null;
+    float? _smoothness = null;
     float? _radius = null;
 
-    string HalfStyle => $"background:#5750ff;width: {_size}px;height:{_size / 2}px;display:flex;align-items: center;justify-content: center;";
-    string Style => $"background:#15cbc6;width: {_size}px;height:{_size}px;display:flex;align-items: center;justify-content: center;";
+    string HalfStyle => $"background:linear-gradient(0deg, #d02948, #19c5e0);width: {_size}px;height:{_size / 2}px;display:flex;align-items: center;justify-content: center;";
+    string Style => $"background:linear-gradient(0deg, #d02948, #19c5e0);width: {_size}px;height:{_size}px;display:flex;align-items: center;justify-content: center;";
 }
