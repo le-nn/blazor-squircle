@@ -32,12 +32,12 @@ https://le-nn.github.io/blazor-squircle/
 ## Installation
 
 You can install the package via NuGet.
+Requires .NET 8 or later.
 
 ```
 dotnet add package Squircle.Blazor
 
 ```
-
 
 ## Usage
 
