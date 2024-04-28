@@ -36,8 +36,11 @@ Requires .NET 8 or later.
 
 ```
 dotnet add package Squircle.Blazor
-
 ```
+
+NuGet
+
+[https://www.nuget.org/packages/Squircle.Blazor/](https://www.nuget.org/packages/Squircle.Blazor/)
 
 ## Usage
 
